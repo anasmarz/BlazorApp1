@@ -1,0 +1,43 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+
+@using System.Globalization
+
+@{
+    var employeeName = "Muhammad Anas Bin Mohd Marzuki";
+    var position = "Internship";
+    var employeeNo = "INT020";
+    var yearsOfService = "0 Year(s), 0 Month(s)";
+    var annualLeave = 0.0;
+    var replacementLeave = 0.0;
+    var medicalLeave = 0.0;
+    var publishedDate = "27/02/2020";
+    var publishedTime = "15:43:37";
+    var publishedBy = "Yusrianna Ibrahim";
+}
+
+<div class="employee-profile">
+    <h2>Employee Profile</h2>
+    <p><strong>Name:</strong> @employeeName</p>
+    <p><strong>Position:</strong> @position</p>
+    <p><strong>Employee No:</strong> @employeeNo</p>
+    <p><strong>Years of Service:</strong> @yearsOfService</p>
+    <p><strong>Unutilized Annual Leave:</strong></p>
+    <table>
+        <tr>
+            <th>Claim</th>
+            <th>Performance</th>
+            <th>Training</th>
+            <th>WFH</th>
+        </tr>
+        <tr>
+            <td>@annualLeave</td>
+            <td>@replacementLeave</td>
+            <td>@medicalLeave</td>
+            <td></td>
+        </tr>
+    </table>
+    <p><strong>Published on:</strong> @publishedDate @publishedTime by @publishedBy</p>
+</div>
